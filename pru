@@ -31,6 +31,12 @@ cd /shared/sysadm
 touch deepak.txt
 ls -d deepak.txt
 ll -d deepak.txt
+Create a user jack and assign a password alberto, This is user should be member of wheel group as well as nobody group
+useradd jack 
+passwd jack
+usermod -aG wheel jack 
+usermod -aG nobody jack
+cat /etc/group
 ##########################################################################################################################
 TOMCAT-SERVER
 * first 3 instances dev-server , jenkins-server , web-server , tomcat-server

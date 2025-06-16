@@ -9,7 +9,7 @@ ques.Create the following users,groups and group membership
 SOl:-
 cat /etc/group
 groupadd sysadm
-cat /etc/group/ -i sysadm
+cat /etc/group
 useradd harry
 passwd harry same for natasha and sarah
 usermod -G sysadm harry

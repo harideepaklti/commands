@@ -415,6 +415,7 @@ connect instance
     7  touch devops.txt{1..10}
     8  ll
     9  history
+snap should be created after typing the commands in vir terminal
 create a duplicte session
 select ohio region and create a new instance(test-server)
 create a snapshot for the data-vol in (N.virgina) -> copy the snapshot -> destination = us-east-2

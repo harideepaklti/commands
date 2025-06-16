@@ -85,6 +85,10 @@ sudo su -
 hostname = apache.example.com
 bash
 yum install java*
+yum install git
+git init
+and then webhook
+and then workspace with cd and ll in terminal
 from google copy the link for tomcat 9 download select tar.gz file
  yum install wget
  wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.106/bin/apache-tomcat-9.0.106.tar.gz

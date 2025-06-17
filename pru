@@ -454,6 +454,7 @@ server-1 and server 2
 #systemctl enable nfs-server.service
 server-3
 #systemctl status nfs-common.service
+create separate nfs security group
 allow nfs port on 3 servers (2049)
 create a new security group 
 name : efs1-sg 

@@ -1,4 +1,15 @@
 LiNUX
+useradd deepak
+passwd deepak
+cd /etc
+ll
+vim /etc/sudoers
+we have add user at all 
+whereis useradd use this command to know path
+after add user at all
+su deepak
+sudo useradd pooja
+vim /etc/group
 to add user not as root :- user/bin/useradd/user/bin/passwd paste this in vim /etc/sudoers 
 ques.Create the following users,groups and group membership
 -A group named sysadm

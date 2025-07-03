@@ -671,3 +671,54 @@ scp devops.txt root@public-ip-(nv-region-termial):/tmp
 cd /tmp
 ll
 vice-versa (optional)
+
+-------------------------------------------------------------------------------------------------
+container creation
+
+yum install docker*
+systemctl enable docker
+
+systemctl restart docker
+docker pull ubuntu
+docker image ls
+docker ps -a
+docker run -it --name web-two -p 8080:80 ubuntu /bin/bash
+come out of docker ctl+P+Q
+docker pull httpd
+docker attach c63fe6730047
+apt update -y
+apt install apache2
+cd /var/www/html/index.html
+echo "thos ishyman" > index.html
+service apache2 start
+docker ps -a
+docker inspect c63fe6730047
+you will get ip in last and public ip with port number 8080 in web browser
+#for creating volume
+curl+ip in inspect
+docker volume create my-vol
+ docker run -it --name dockerpractice -v my-vol:/var/www/html -p 8081:8080 ubuntu  /bin/bash
+cd /var/www/html
+touch hym{1..10}
+ctl+p+q
+cd /var/lib/docker
+ll
+cd volumes
+ll docker ps -a
+cd my-vol
+cd _data
+ll
+cd
+ docker stop c63fe6730047
+here id should docker id
+docker rm c63fe6730047
+cd /var/lib/docker
+ ll
+cd
+mkdir hi
+docker volume create my-vol
+docker run -it -v /hi/:/tmp ubuntu /bin/bash
+ cd /tmp
+touch devops.txt
+ docker ps -a
+cd /hi

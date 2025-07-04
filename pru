@@ -688,7 +688,7 @@ docker pull httpd
 docker attach c63fe6730047
 apt update -y
 apt install apache2
-cd /var/www/html/index.html
+cd /var/www/html
 echo "thos ishyman" > index.html
 service apache2 start
 docker ps -a

@@ -726,3 +726,44 @@ docker run -it -v /hi/:/tmp ubuntu /bin/bash
 touch devops.txt
  docker ps -a
 cd /hi
+ansible question for creating apache httpd server
+create 3 instances 
+and provide connection between it by making the entry of hostname and ip in /etc/hosts file
+generate ssh key and copy to the target machine under authorized keys
+install ansible on controller machine
+make the entry in /etc/ansible
+[dev-servers]
+ansible-target
+[prod-servers]
+ansible-target2
+#cd /etc/ansible
+after creating the directory like project in ansible and create index.html file which will be used in playbook
+echo "this is ansible" > index.html
+this playbook and past in vim of created dir.
+- name: this is sample playbook
+  hosts: all
+  tasks:
+
+    - name: installing apache
+      yum:
+        name: httpd
+        state: present
+    - name: cp
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+    - name: ci
+      systemd:
+        name: httpd
+        state: started
+        enabled: true
+# ansible-playbook sample-playbook.yaml --syntax-check
+#ansible-playbook sample-playbook.yaml -C
+#ansible-playbook sample-playbook.yaml
+in node(worker)
+ vim /etc/hosts
+ping the ip and hostname
+in vim authorized keys put the key generated in controller
+cd /var/www/html
+cat index.html
+check in web browser with http not with https using public ip

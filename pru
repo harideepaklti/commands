@@ -683,11 +683,15 @@ docker pull ubuntu
 docker image ls
 docker ps -a
 docker run -it --name web-two -p 8080:80 ubuntu /bin/bash
+or if nginx place nginx in ubuntu for pull also
 come out of docker ctl+P+Q
 docker pull httpd
 docker attach c63fe6730047
 apt update -y
 apt install apache2
+or if nginx apt install nginx
+service nginx start
+service nginx status
 cd /var/www/html
 echo "thos ishyman" > index.html
 service apache2 start
@@ -697,7 +701,7 @@ you will get ip in last and public ip with port number 8080 in web browser
 #for creating volume
 curl+ip in inspect
 docker volume create my-vol
- docker run -it --name dockerpractice -v my-vol:/var/www/html -p 8081:8080 ubuntu  /bin/bash
+ docker run -it --name dockerpractice -v my-vol:/var/www/html -p 8081:8080 ubuntu  /bin/bash 
 cd /var/www/html
 touch hym{1..10}
 ctl+p+q

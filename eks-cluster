@@ -78,7 +78,7 @@ spec:
         requests:
           memory: "250Mi"
           cpu: "400m"
-#kubectl apply -f gauranteed.yaml
+#kubectl apply -f guranteed.yaml
 #kubectl get pods
 #kubectl describe pod deepak2-app
 ---------------------------------------------------------------------------------------------------------------------------------

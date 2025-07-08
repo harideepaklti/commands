@@ -94,9 +94,7 @@ verify in target machines
 remove the httpd package if installed on the 3 machines
 install on controll machine
  yum install httpd -y
-   48  cd /etc/httpd/conf
-   49  cp httpd.conf /etc/ansible/project-x
-   50  cd
+   also create vim host in ansible
 make a project-x directory in ansible 
 #cd /etc/httpd/conf
 #cp httpd.conf /etc/ansible/project-x
@@ -105,7 +103,7 @@ make changes in the httpd.conf file
 #vim hanlders.yaml
 ---
 - name: using handlers with apache
-  hosts: ansible-target
+  hosts: all
   tasks:
 
     - name: installed httpd
@@ -149,6 +147,9 @@ make changes in the httpd.conf file
       service:
         name: httpd
         state: restarted
+
+for output got to the node1 and check the whether if have done changes in httpd.conf file in ansible that should be refelected in node1 and index.html also should be availabe in /var/www/html directory in node1.
+
 
 --------ec2 provisioning via ansible-----------------
 create an instance

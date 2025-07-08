@@ -188,7 +188,7 @@ localhost
         aws_access_key: access_key
         aws_secret_key: secret_key
         name: K8s-Master
-        instance_type: t2.medium
+        instance_type: t2.micro
         image_id: ami-0a7d80731ae1b2435
         vpc_subnet_id: subnet-0252c2e12558d5909
         key_name: key

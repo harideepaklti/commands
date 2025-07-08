@@ -181,9 +181,7 @@ localhost
   #cd /etc/ansible
   #vim ec2.yaml
 ---
-- hosts:  localhost
-  vars_files:
-    - my_cred.yaml
+- hosts:  all
   tasks:
     - name: creating Ec2 instance via Ansible
       amazon.aws.ec2_instance:
@@ -202,6 +200,7 @@ localhost
 [localhost]
 localhost
 localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python3 
+the above sholud also paste with local in vim hosts
 
 #ansible-playbook ec2.yaml --syntax-check
 #ansible-playbook ec2.yaml -C

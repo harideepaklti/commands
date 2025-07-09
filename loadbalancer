@@ -1,0 +1,8 @@
+in 3 instances with different subnets
+ yum install httpd
+    2  cd /var/www/html
+    3  cat > index.html
+    4  cat index.html
+    5   systemctl restart httpd
+    6   systemctl enable httpd
+create load balance and target grp and register target 

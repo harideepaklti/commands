@@ -1,0 +1,29 @@
+---
+- name: adding multiple users
+  hosts: all
+  tasks:
+    - name: create multiple users
+      user:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - mansi
+        - sachin
+        - uday
+        - deepak
+        - hyman
+this is adding playbook
+---
+- name: copied files
+  hosts: all
+  tasks:
+    - name: copied multiple files
+      copy:
+        src: "{{ item }}"
+        dest: /tmp
+      loop:
+        - /etc/passwd
+        - /etc/fstab
+        - /etc/gshadow
+this is copied id playbook
+to get the output in node we should go tmp and cat passwd
